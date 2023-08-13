@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Marck+Script&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  @variants responsive {
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      --tw-scroll-snap-strictness: proximity;
+      scrollbar-width: none;
+    }
+  }
+}
+
+/* .logo {
+  border: 3.5px solid #ddd;
+  border-right: 4px solid #e05c04;
+  padding: 6px;
+} */
+
+/* table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+table {
+  width: 100%;
+  height: full;
+  margin: 0 auto;
+  display: block;
+  overflow-x: auto;
+  border-spacing: 0;
+}
+
+th {
+  padding: 15px 20px;
+}
+
+td {
+  padding: 5px 10px;
+  border-top-width: 0;
+  border-left-width: 0;
+} */
