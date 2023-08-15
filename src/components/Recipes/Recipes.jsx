@@ -19,9 +19,6 @@ const Recipes = () => {
     fetchData();
   }, [recipes, loading]);
 
-  console.log("loading", loading);
-  console.log("recipes", recipes);
-
   return (
     <>
       {loading ? (
@@ -33,37 +30,39 @@ const Recipes = () => {
           {recipes.map((item) => (
             <section
               key={item.id}
-              className="flex flex-col justify-between min-w-[200px] min-h-[300px] max-w-full bg-red-50 rounded-xl"
+              className="flex flex-col justify-between min-w-[200px] min-h-[350px] max-w-full bg-red-50 rounded-xl mt-10"
             >
               <div className="flex justify-center transform -translate-y-16">
                 <img
                   src={item.image}
-                  className="absolute top-10 flex justify-center w-12 h-12 object-cover rounded-full bg-white overflow-hidden"
+                  className="absolute top-10 flex justify-center w-16 h-16 object-cover rounded-full bg-white overflow-hidden"
                 />
               </div>
-              <div className="flex flex-col gap-4 items-center">
-                <h4>{item.name}</h4>
-                <span
-                  className={
-                    item.Difficulty === "Easy"
-                      ? "bg-green-200 text-green-600 px-2 py-[2px] rounded-md"
-                      : item.Difficulty === "Medium"
-                      ? "bg-yellow-200 text-yellow-600 px-2 py-[2px] rounded-md"
-                      : "bg-red-200 text-red-600 px-2 py-[2px] rounded-md"
-                  }
-                >
-                  {item.Difficulty}
-                </span>
-              </div>
+              <section className="flex flex-col gap-8 items-center my-6">
+                <h4 className="text-xl">{item.name}</h4>
+                <div>
+                  <span
+                    className={
+                      item.Difficulty === "Easy"
+                        ? "bg-green-200 text-green-600 px-2 py-[2px] rounded-md"
+                        : item.Difficulty === "Medium"
+                        ? "bg-yellow-200 text-yellow-600 px-2 py-[2px] rounded-md"
+                        : "bg-red-200 text-red-600 px-2 py-[2px] rounded-md"
+                    }
+                  >
+                    {item.Difficulty}
+                  </span>
+                </div>
+              </section>
               <div className="flex justify-around mt-6 text-xs px-4">
                 <p className="flex flex-col items-center gap-2">
-                  <span className="text-lg">
+                  <span className="text-2xl font-secondary">
                     {item["Cooking Time"].split(" ")[0]}
                   </span>
                   <span>Min</span>
                 </p>
                 <p className="flex flex-col items-center gap-2 border-x px-8">
-                  <span className="text-lg">{item.calories}</span>
+                  <span className="text-2xl font-secondary">{item.calories}</span>
                   <span>Kcal</span>
                 </p>
                 <p className="flex flex-col items-center gap-2">

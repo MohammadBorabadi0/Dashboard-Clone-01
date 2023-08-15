@@ -8,8 +8,8 @@ const Nav = () => {
   return (
     <nav
       className={`flex ${isOpen ? "left-2 sm:left-[234px]" : "sm:left-[110px]"} ${
-        ref && "fixed top-0 right-0 bg-white shadow-lg rounded-sm mr-2 p-2"
-      } z-10 bg-red-50 px-2 items-center justify-between overflow-hidden`}
+        ref && "fixed top-0 right-0 bg-white shadow-lg rounded-sm mr-2 px-2 py-3"
+      } z-10 bg-red-50 px-4 items-center justify-between overflow-hidden`}
     >
       <h2 className="flex items-center gap-2 text-sm sm:text-lg lg:text-2xl font-extrabold">
         Hi, Sara!

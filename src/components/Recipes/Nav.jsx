@@ -12,7 +12,9 @@ const Nav = () => {
         />
       </div>
       <div className="flex items-center gap-3">
-        <IoMdOptions />
+        <button>
+          <IoMdOptions />
+        </button>
         <button className="bg-red-600 text-white rounded-lg p-2 text-sm">
           Go To Premium
         </button>
